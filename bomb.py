@@ -2,21 +2,21 @@ import time
 import mouse
 from pyautogui import press
 
-# segundos para voltar a trabalhar
+# tempo trabalhando em segundos
 time_work = 3600
 
-def connect():
-    print('connecting')
+def click_connect_wallet():
+    print('conectando sua carteira')
     connect_button_x = '950'
     connect_button_y = '650'
 
     mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
     mouse.click('left')
 
-    time.sleep(8)
+    time.sleep(10)
 
-def metamask():
-    print('metamask')
+def click_metamask():
+    print('solicitação de assinatura do bombcrypto')
     metamask_subcribe_x = 1800
     metamask_subcribe_y = 550
 
@@ -26,8 +26,8 @@ def metamask():
     # waiting load game
     time.sleep(15)
 
-def heroes():
-    print('selecting heroes')
+def click_heroes():
+    print('entrando na listagem de bombers')
     heroes_x = 1370
     heroes_y = 690
 
@@ -36,8 +36,8 @@ def heroes():
 
     time.sleep(1)
 
-def work():
-    print('work all')
+def click_work_all():
+    print('colocando todos os bombers para trabalhar')
     work_all_x = 880
     work_all_y = 330
 
@@ -46,8 +46,8 @@ def work():
 
     time.sleep(1)
 
-def home():
-    print('backing home...')
+def click_home():
+    print('voltando para home')
     work_back_x = 1015
     work_back_y = 283
 
@@ -56,37 +56,33 @@ def home():
 
     time.sleep(1)
 
-def mining():
+def click_mining():
     miner_x = 1015
     miner_y = 483
 
     mouse.move(miner_x, miner_y, absolute=True, duration=0.1)
     mouse.click('left')
-    print('mining...')
+    print('iniciando a mineração')
 
 def rotine():
-    # CONNECTING GAME
-    connect()
+    click_connect_wallet()
 
-    # METAMASK
-    metamask()
+    click_metamask()
 
-    # SELECTING HEROES
-    heroes()
+    click_heroes()
 
-    # ALL HEROES FOR WORK
-    work()
+    click_work_all()
 
-    # HOME
-    home()
+    click_home()
 
-    # MINING
-    mining()
+    click_mining()
 
 while True:
+    print('deixe o navegador aberto no site do bombcrypto')
     time.sleep(5)
     press('f5')
-    time.sleep(10)
-    print('starting...')
+    print('aguardando 15 segundos para começar')
+    time.sleep(15)
+    print('iniciando...')
     rotine()
     time.sleep(time_work)
