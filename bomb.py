@@ -5,6 +5,11 @@ from pyautogui import press
 # tempo trabalhando em segundos
 time_work = 3600
 
+def click_browser():
+    mouse.move(150, 150, absolute=True, duration=0.1)
+    mouse.click('left')
+    time.sleep(5)
+
 def click_connect_wallet():
     print('conectando sua carteira')
     connect_button_x = '950'
@@ -34,7 +39,7 @@ def click_heroes():
     mouse.move(heroes_x, heroes_y, absolute=True, duration=0.1)
     mouse.click('left')
 
-    time.sleep(1)
+    time.sleep(5)
 
 def click_work_all():
     print('colocando todos os bombers para trabalhar')
@@ -44,7 +49,7 @@ def click_work_all():
     mouse.move(work_all_x, work_all_y, absolute=True, duration=0.1)
     mouse.click('left')
 
-    time.sleep(1)
+    time.sleep(5)
 
 def click_home():
     print('voltando para home')
@@ -54,7 +59,7 @@ def click_home():
     mouse.move(work_back_x, work_back_y, absolute=True, duration=0.1)
     mouse.click('left')
 
-    time.sleep(1)
+    time.sleep(5)
 
 def click_mining():
     miner_x = 1015
@@ -64,7 +69,7 @@ def click_mining():
     mouse.click('left')
     print('iniciando a mineração')
 
-def rotine():
+def rotine():    
     click_connect_wallet()
 
     click_metamask()
@@ -80,9 +85,12 @@ def rotine():
 while True:
     print('deixe o navegador aberto no site do bombcrypto')
     time.sleep(5)
+    click_browser()
+
     press('f5')
     print('aguardando 15 segundos para começar')
     time.sleep(15)
+    
     print('iniciando...')
     rotine()
     time.sleep(time_work)
