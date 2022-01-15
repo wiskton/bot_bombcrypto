@@ -63,7 +63,7 @@ def click_home():
 
 def click_mining():
     miner_x = 1015
-    miner_y = 483
+    miner_y = 383
 
     mouse.move(miner_x, miner_y, absolute=True, duration=0.1)
     mouse.click('left')
