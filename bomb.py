@@ -1,9 +1,10 @@
 import time
 import mouse
-from pyautogui import press
+import keyboard
+
 
 # tempo trabalhando em segundos
-time_work = 3600
+time_work = 4000
 
 def click_browser():
     mouse.move(150, 150, absolute=True, duration=0.1)
@@ -18,7 +19,7 @@ def click_connect_wallet():
     mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
     mouse.click('left')
 
-    time.sleep(10)
+    time.sleep(20)
 
 def click_metamask():
     print('solicitação de assinatura do bombcrypto')
@@ -29,7 +30,7 @@ def click_metamask():
     mouse.click('left')
 
     # waiting load game
-    time.sleep(15)
+    time.sleep(20)
 
 def click_heroes():
     print('entrando na listagem de bombers')
@@ -53,8 +54,8 @@ def click_work_all():
 
 def click_home():
     print('voltando para home')
-    work_back_x = 1015
-    work_back_y = 283
+    work_back_x = 1000
+    work_back_y = 271
 
     mouse.move(work_back_x, work_back_y, absolute=True, duration=0.1)
     mouse.click('left')
@@ -87,7 +88,7 @@ while True:
     time.sleep(5)
     click_browser()
 
-    press('f5')
+    keyboard.press_and_release('ctrl + r')
     print('aguardando 15 segundos para começar')
     time.sleep(15)
     
