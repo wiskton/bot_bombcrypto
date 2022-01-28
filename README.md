@@ -5,7 +5,7 @@ Bot funciona em resolução 1920x1080, caso seja outra resolução precisará al
 
 - Instalar o python 3.10
 - Baixar os arquivos deste repositório
-
+- Deixe o navegador aberto com a metamask e connectada e depois abra o bot
 
 Rodar no Windows:
 
