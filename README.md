@@ -12,7 +12,7 @@ Rodar no Windows:
     Baixar os arquivos e executar o run.bat é preciso deixar o navegador aberto
     
     
-Linux:
+Rodar no Linux:
 
     pip install -r requirements.txt
     python bomb.py
