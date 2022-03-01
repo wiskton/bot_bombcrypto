@@ -21,6 +21,16 @@ def click_connect_wallet():
 
     time.sleep(20)
 
+def click_connect_metamask():
+    print('conectando sua carteira')
+    connect_button_x = '935'
+    connect_button_y = '650'
+
+    mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
+    mouse.click('left')
+
+    time.sleep(20)
+
 def click_metamask():
     print('solicitação de assinatura do bombcrypto')
     metamask_subcribe_x = 1800
@@ -72,6 +82,8 @@ def click_mining():
 
 def rotine():    
     click_connect_wallet()
+    
+    click_connect_metamask()
 
     click_metamask()
 
