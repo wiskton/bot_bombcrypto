@@ -23,8 +23,8 @@ def click_connect_wallet():
 
 def click_connect_metamask():
     print('conectando sua carteira - metamask')
-    connect_button_x = '930'
-    connect_button_y = '650'
+    connect_button_x = '950'
+    connect_button_y = '595'
 
     mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
     mouse.click('left')
