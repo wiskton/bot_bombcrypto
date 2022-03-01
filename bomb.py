@@ -22,8 +22,8 @@ def click_connect_wallet():
     time.sleep(20)
 
 def click_connect_metamask():
-    print('conectando sua carteira')
-    connect_button_x = '935'
+    print('conectando sua carteira - metamask')
+    connect_button_x = '930'
     connect_button_y = '650'
 
     mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
