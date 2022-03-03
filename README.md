@@ -1,6 +1,11 @@
 # bot_bombcrypto
 
 
+Quem puder se inscrever no meu canal agradeço!
+
+    https://www.youtube.com/wiskton
+
+
 Bot funciona em resolução 1920x1080, caso seja outra resolução precisará alterar os parametros dos botões x, y das funções no código.
 
 - Instalar o python 3.10
