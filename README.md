@@ -1,9 +1,9 @@
 # bot_bombcrypto
 
 
-Quem puder se inscrever no meu canal agradeço!
+Quem puder se inscrever no meu canal, agradeço demais!
 
-- <a href="https://www.youtube.com/wiskton" target="_blank">YouTube<a>
+- <a href="https://www.youtube.com/wiskton">YouTube<a>
 
 
 Bot funciona em resolução 1920x1080, caso seja outra resolução precisará alterar os parametros dos botões x, y das funções no código.
