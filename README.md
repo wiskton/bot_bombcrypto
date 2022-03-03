@@ -3,7 +3,7 @@
 
 Quem puder se inscrever no meu canal agradeço!
 
-    https://www.youtube.com/wiskton
+- <a href="https://www.youtube.com/wiskton" target="_blank">YouTube<a>
 
 
 Bot funciona em resolução 1920x1080, caso seja outra resolução precisará alterar os parametros dos botões x, y das funções no código.
