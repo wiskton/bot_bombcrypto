@@ -12,7 +12,15 @@ def click_button(x, y, msg, second):
     time.sleep(second)
 
 
+def refresh_page():
+    print("Clicando CTRL+R - recarregar a página")
+    pyautogui.hotkey("ctrl", "r")
+    print("Aguardando 15 segundos para começar")
+    time.sleep(15)
+
+
 def rotine():
+    print("Iniciando...")
 
     click_button(964, 682, "carregando jogo", 5)
 
@@ -29,16 +37,12 @@ def rotine():
     click_button(943, 502, "começando a mineração", 5)
 
 
+print("Deixe o navegador aberto no site do bombcrypto com a metamask logada")
+
+
 while True:
-    print("deixe o navegador aberto no site do bombcrypto")
-    time.sleep(2)
-    click_button(150, 250, "selecionando o navegador", 1)
-
-    pyautogui.hotkey("ctrl", "r")
-    print("aguardando 20 segundos para começar")
-    time.sleep(20)
-
-    print("iniciando...")
+    click_button(150, 250, "Selecionando o navegador", 1)
+    refresh_page()
     rotine()
     print(datetime.datetime.today())
     time.sleep(time_work)

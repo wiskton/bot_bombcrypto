@@ -1,10 +1,11 @@
 import time
+import datetime
 import mouse
 import keyboard
 
 
 # tempo trabalhando em segundos
-time_work = 4000
+time_work = 4500
 
 
 def click_button(x, y, msg, second):
@@ -24,9 +25,9 @@ def refresh_page():
 def rotine():
     print("iniciando rotina")
 
-    click_button(950, 650, "conectando jogo", 5)
+    click_button(950, 650, "abrindo o jogo", 5)
 
-    click_button(950, 595, "conectando sua carteira - metamask", 20)
+    click_button(950, 595, "conectando a metamask", 20)
 
     click_button(1800, 550, "solicitação de assinatura do bombcrypto", 20)
 
@@ -39,11 +40,12 @@ def rotine():
     click_button(1015, 383, "iniciando a mineração", 5)
 
 
-print("Deixe o navegador aberto no site do bombcrypto com a metamask connectada")
+print("Deixe o navegador aberto no site do bombcrypto com a metamask logada")
 
 
 while True:
-    click_button(150, 150, "clicando x=150 e y=150 para selecionar o navegador", 5)
+    click_button(150, 150, "Selecionando o navegador", 5)
     refresh_page()
     rotine()
+    print(datetime.datetime.today())
     time.sleep(time_work)
