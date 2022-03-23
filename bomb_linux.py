@@ -3,7 +3,7 @@ import datetime
 import pyautogui
 
 # tempo trabalhando em segundos
-time_work = 3200
+time_work = 4500
 
 def click_button(x, y, msg, second):
     print(msg)
@@ -13,9 +13,9 @@ def click_button(x, y, msg, second):
 def rotine():
     click_button(964, 682, 'connect', 5)
     
-    click_button(978, 618, 'connect metamask', 30)
+    click_button(978, 618, 'connect metamask', 20)
 
-    click_button(1821, 631, 'sign metamask', 30)
+    click_button(1821, 631, 'sign metamask', 20)
 
     click_button(1363, 759, 'heroes', 5)
 
