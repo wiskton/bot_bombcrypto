@@ -13,9 +13,9 @@ def click_button(x, y, msg, second):
 def rotine():
     click_button(964, 682, 'connect', 5)
     
-    click_button(978, 618, 'connect metamask', 30)
+    click_button(978, 618, 'connect metamask', 20)
 
-    click_button(1821, 631, 'sign metamask', 30)
+    click_button(1821, 631, 'sign metamask', 20)
 
     click_button(1363, 759, 'heroes', 5)
 
