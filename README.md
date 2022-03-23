@@ -19,8 +19,8 @@ Rodar no Windows:
     
 Rodar no Linux:
 
-    pip install -r requirements.txt
-    python bomb.py
+    pip install -r requirements_linux.txt
+    python bomb_linux.py
     
 
 Caso precise atualizar as posições X, Y. Basta rodar o programa e passar o mouse em cima dos botões e alterar X,Y:
