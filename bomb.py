@@ -6,104 +6,44 @@ import keyboard
 # tempo trabalhando em segundos
 time_work = 4000
 
-def click_browser():
-    mouse.move(150, 150, absolute=True, duration=0.1)
-    mouse.click('left')
-    time.sleep(5)
 
-def click_connect_wallet():
-    print('conectando sua carteira')
-    connect_button_x = '950'
-    connect_button_y = '650'
+def click_button(x, y, msg, second):
+    print(msg)
+    mouse.move(x, y, absolute=True, duration=0.1)
+    mouse.click("left")
+    time.sleep(second)
 
-    mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
-    mouse.click('left')
 
-    time.sleep(20)
+def refresh_page():
+    print("Clicando CTRL+R - recarregar a página")
+    keyboard.press_and_release("ctrl + r")
+    print("Aguardando 15 segundos para começar")
+    time.sleep(15)
 
-def click_connect_metamask():
-    print('conectando sua carteira - metamask')
-    connect_button_x = '950'
-    connect_button_y = '595'
 
-    mouse.move(connect_button_x, connect_button_y, absolute=True, duration=0.1)
-    mouse.click('left')
+def rotine():
+    print("iniciando rotina")
 
-    time.sleep(20)
+    click_button(950, 650, "conectando jogo", 5)
 
-def click_metamask():
-    print('solicitação de assinatura do bombcrypto')
-    metamask_subcribe_x = 1800
-    metamask_subcribe_y = 550
+    click_button(950, 595, "conectando sua carteira - metamask", 20)
 
-    mouse.move(metamask_subcribe_x, metamask_subcribe_y, absolute=True, duration=0.1)
-    mouse.click('left')
+    click_button(1800, 550, "solicitação de assinatura do bombcrypto", 20)
 
-    # waiting load game
-    time.sleep(20)
+    click_button(1370, 690, "entrando na listagem de bombers", 5)
 
-def click_heroes():
-    print('entrando na listagem de bombers')
-    heroes_x = 1370
-    heroes_y = 690
+    click_button(880, 330, "colocando todos os bombers para trabalhar", 5)
 
-    mouse.move(heroes_x, heroes_y, absolute=True, duration=0.1)
-    mouse.click('left')
+    click_button(1000, 271, "voltando para home", 5)
 
-    time.sleep(5)
+    click_button(1015, 383, "iniciando a mineração", 5)
 
-def click_work_all():
-    print('colocando todos os bombers para trabalhar')
-    work_all_x = 880
-    work_all_y = 330
 
-    mouse.move(work_all_x, work_all_y, absolute=True, duration=0.1)
-    mouse.click('left')
+print("Deixe o navegador aberto no site do bombcrypto com a metamask connectada")
 
-    time.sleep(5)
-
-def click_home():
-    print('voltando para home')
-    work_back_x = 1000
-    work_back_y = 271
-
-    mouse.move(work_back_x, work_back_y, absolute=True, duration=0.1)
-    mouse.click('left')
-
-    time.sleep(5)
-
-def click_mining():
-    miner_x = 1015
-    miner_y = 383
-
-    mouse.move(miner_x, miner_y, absolute=True, duration=0.1)
-    mouse.click('left')
-    print('iniciando a mineração')
-
-def rotine():    
-    click_connect_wallet()
-    
-    click_connect_metamask()
-
-    click_metamask()
-
-    click_heroes()
-
-    click_work_all()
-
-    click_home()
-
-    click_mining()
 
 while True:
-    print('deixe o navegador aberto no site do bombcrypto')
-    time.sleep(5)
-    click_browser()
-
-    keyboard.press_and_release('ctrl + r')
-    print('aguardando 15 segundos para começar')
-    time.sleep(15)
-    
-    print('iniciando...')
+    click_button(150, 150, "clicando x=150 e y=150 para selecionar o navegador", 5)
+    refresh_page()
     rotine()
     time.sleep(time_work)
